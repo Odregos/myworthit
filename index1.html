@@ -31,7 +31,7 @@ body {
    var tabOrder = '';
    var lastBtnClick = '';
    var pageOrientation = 1;
-   var pageLeftMargin = 67;
+   var pageLeftMargin = 40;
    var pageRightMargin = 67;
    var pageTopMargin = 72;
    var pageBottomMargin = 72;
@@ -94,283 +94,278 @@ body {
 
 </head>
 
-<body onload='wwsInit();' tracingsrc="res/icon/dollars.png" tracingopacity="28"><center>
+<center>
 <form name='worksheet' action='' enctype='multipart/form-data'>
-  <table id='main' border=0 cellpadding=0px cellspacing=0 style='border-collapse:collapse; text-align:left; table-layout:fixed; width:520px;'>
-  <tr id='ROW2' style='height:31px;'>
-    <td id='E2' class='A1' category='general'><table id='main2' border=0 cellpadding=0px cellspacing=0 style='border-collapse:collapse; text-align:left; table-layout:fixed; width:520px;'>
-      <col width='20px' valign='middle' align='left'>
-      <col width='100px' valign='middle' align='left'>
-      <col width='53px' valign='middle' align='left'>
-      <col width='97px' valign='middle' align='left'>
-      <col width='155px' valign='middle' align='left'>
-      <col width='50px' valign='middle' align='left'>
-      <col width='45px' valign='middle' align='left'>
-      <tr id='ROW1' style='height:20px;'>
-        <td width="3" class='A1' id='A1' category='general'></td>
-        <td width="152" class='A1' id='B1' category='general'></td>
-        <td width="51" class='C1' id='C1' category='general'></td>
-        <td width="64" class='A1' id='D1' category='general'></td>
-        <td width="138" class='A1' id='E1' category='general'></td>
-        <td width="48" class='C1' id='F1' category='general'></td>
-        <td width="64" class='A1' id='G1' category='general'></td>
-      </tr>
-      <tr id='ROW' style='height:31px;'>
-        <td id='A2' class='A1' category='general'></td>
-        <td id='B2' class='B2' category='general'>Is It Worth It</td>
-        <td id='C2' class='C1' category='general'></td>
-        <td id='D2' class='A1' category='general'></td>
-        <td id='E' class='A1' category='general'><span class="B2"><img src="res/icon/android/myicon-96-xhdpi.png" alt="my alt" width="69" height="58" title="my icon"/></span></td>
-        <td id='F2' class='C1' category='general'></td>
-        <td id='G2' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW3' style='height:20px;'>
-        <td id='A3' class='A1' category='general'></td>
-        <td id='B3' class='A1' category='general'></td>
-        <td id='C3' class='C1' category='general'></td>
-        <td id='D3' class='A1' category='general'></td>
-        <td id='E3' class='A1' category='general'></td>
-        <td id='F3' class='C1' category='general'></td>
-        <td id='G3' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW4' style='height:21px;'>
-        <td id='A4' class='A4' category='general'></td>
-        <td id='B4' class='A4' category='general'>Exchange</td>
-        <td id='C4' class='C4' category='number' format='0.00' data-cval=''><input id='iC4' type='text' class='Text iC4' onChange='return calculate("C4")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D4' class='A4' category='general'>USD,Euro</td>
-        <td id='E4' class='A4' category='general'>= 1$ Canadian</td>
-        <td id='F4' class='F4' category='general'></td>
-        <td id='G4' class='A4' category='general'></td>
-      </tr>
-      <tr id='ROW5' style='height:20px;'>
-        <td id='A5' class='A1' category='general'></td>
-        <td id='B5' class='B5' category='general'></td>
-        <td id='C5' class='C5' category='general'></td>
-        <td id='D5' class='B5' category='general'></td>
-        <td id='E5' class='A1' category='general'></td>
-        <td id='F5' class='C1' category='general'></td>
-        <td id='G5' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW6' style='height:21px;'>
-        <td id='A6' class='A6' category='general'></td>
-        <td id='B6' class='B6' category='general'>Foreign Currancy Price</td>
-        <td id='C6' class='C6' category='general'></td>
-        <td id='D6' class='B6' category='general'></td>
-        <td id='E6' class='E6' category='general'>Canadian Currancy Price</td>
-        <td id='F6' class='F6' category='general'></td>
-        <td id='G6' class='E6' category='general'></td>
-      </tr>
-      <tr id='ROW7' style='height:20px;'>
-        <td id='A7' class='A1' category='general'></td>
-        <td id='B7' class='B5' category='general'></td>
-        <td id='C7' class='C5' category='general'></td>
-        <td id='D7' class='B5' category='general'></td>
-        <td id='E7' class='E7' category='general'></td>
-        <td id='F7' class='F7' category='general'></td>
-        <td id='G7' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW8' style='height:20px;'>
-        <td id='A8' class='A1' category='general'></td>
-        <td id='B8' class='B5' category='general'>Purchase</td>
-        <td id='C8' class='C8' category='number' format='0.00' data-cval=''><input id='iC8' type='text' class='Text iC8' onChange='return calculate("C8")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D8' class='B5' category='general'>USD, Euro </td>
-        <td id='E8' class='E7' category='general'>Purchase Price</td>
-        <td id='F8' class='F8' category='number' format='0.00' data-cval=''><input id='iF8' type='text' class='Text iF8' onChange='return calculate("F8")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='G8' class='E7' category='general'>$ Can</td>
-      </tr>
-      <tr id='ROW9' style='height:20px;'>
-        <td id='A9' class='A1' category='general'></td>
-        <td id='B9' class='B5' category='general'></td>
-        <td id='C9' class='C5' category='general'></td>
-        <td id='D9' class='B5' category='general'></td>
-        <td id='E9' class='E7' category='general'></td>
-        <td id='F9' class='F7' category='general'></td>
-        <td id='G9' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW10' style='height:20px;'>
-        <td id='A10' class='A1' category='general'></td>
-        <td id='B10' class='B5' category='general'>Shipping </td>
-        <td id='C10' class='C8' category='number' format='0.00' data-cval=''><input id='iC10' type='text' class='Text iC8' onChange='return calculate("C10")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D10' class='B5' category='general'>USD, Euro</td>
-        <td id='E10' class='E7' category='general'>Taxes</td>
-        <td id='F10' class='F8' category='number' format='0.00' data-cval=''><input id='iF10' type='text' class='Text iF8' onChange='return calculate("F10")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='G10' class='E7' category='general'>%</td>
-      </tr>
-      <tr id='ROW11' style='height:20px;'>
-        <td id='A11' class='A1' category='general'></td>
-        <td id='B11' class='B5' category='general'></td>
-        <td id='C11' class='C5' category='general'></td>
-        <td id='D11' class='B5' category='general'></td>
-        <td id='E11' class='E7' category='general'></td>
-        <td id='F11' class='F7' category='general'></td>
-        <td id='G11' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW12' style='height:20px;'>
-        <td id='A12' class='A1' category='general'></td>
-        <td id='B12' class='B5' category='general'>Tax</td>
-        <td id='C12' class='C8' category='number' format='0.00' data-cval=''><input id='iC12' type='text' class='Text iC8' onChange='return calculate("C12")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D12' class='B5' category='general'>%</td>
-        <td id='E12' class='E7' category='general'>Shipping Costs</td>
-        <td id='F12' class='F8' category='number' format='0.00' data-cval=''><input id='iF12' type='text' class='Text iF8' onChange='return calculate("F12")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='G12' class='E7' category='general'>$ Can</td>
-      </tr>
-      <tr id='ROW13' style='height:20px;'>
-        <td id='A13' class='A1' category='general'></td>
-        <td id='B13' class='B5' category='general'></td>
-        <td id='C13' class='C5' category='general'></td>
-        <td id='D13' class='B5' category='general'></td>
-        <td id='E13' class='E7' category='general'></td>
-        <td id='F13' class='F7' category='general'></td>
-        <td id='G13' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW14' style='height:20px;'>
-        <td id='A14' class='A1' category='general'></td>
-        <td id='B14' class='B5' category='general'>Broker/Bridge</td>
-        <td id='C14' class='C8' category='number' format='0.00' data-cval=''><input id='iC14' type='text' class='Text iC8' onChange='return calculate("C14")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D14' class='B5' category='general'>%</td>
-        <td id='E14' class='E7' category='general'>PayPal / Visa</td>
-        <td id='F14' class='F8' category='number' format='0.00' data-cval=''><input id='iF14' type='text' class='Text iF8' onChange='return calculate("F14")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='G14' class='E7' category='general'>%</td>
-      </tr>
-      <tr id='ROW15' style='height:20px;'>
-        <td id='A15' class='A1' category='general'></td>
-        <td id='B15' class='B5' category='general'></td>
-        <td id='C15' class='C5' category='general'></td>
-        <td id='D15' class='B5' category='general'></td>
-        <td id='E15' class='E7' category='general'></td>
-        <td id='F15' class='F7' category='general'></td>
-        <td id='G15' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW16' style='height:20px;'>
-        <td id='A16' class='A1' category='general'></td>
-        <td id='B16' class='B5' category='general'>PayPal / Visa</td>
-        <td id='C16' class='C8' category='number' format='0.00' data-cval=''><input id='iC16' type='text' class='Text iC8' onChange='return calculate("C16")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D16' class='B5' category='general'>%</td>
-        <td id='E16' class='E7' category='general'>Other</td>
-        <td id='F16' class='F8' category='number' format='0.00' data-cval=''><input id='iF16' type='text' class='Text iF8' onChange='return calculate("F16")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='G16' class='E7' category='general'>$ Can</td>
-      </tr>
-      <tr id='ROW17' style='height:20px;'>
-        <td id='A17' class='A1' category='general'></td>
-        <td id='B17' class='B5' category='general'></td>
-        <td id='C17' class='C5' category='general'></td>
-        <td id='D17' class='B5' category='general'></td>
-        <td id='E17' class='A1' category='general'></td>
-        <td id='F17' class='C1' category='general'></td>
-        <td id='G17' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW18' style='height:20px;'>
-        <td id='A18' class='A1' category='general'></td>
-        <td id='B18' class='B5' category='general'>Pick Up Fee</td>
-        <td id='C18' class='C8' category='number' format='0.00' data-cval=''><input id='iC18' type='text' class='Text iC8' onChange='return calculate("C18")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D18' class='B5' category='general'>USD, Euro</td>
-        <td id='E18' class='A1' category='general'></td>
-        <td id='F18' class='C1' category='general'></td>
-        <td id='G18' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW19' style='height:20px;'>
-        <td id='A19' class='A1' category='general'></td>
-        <td id='B19' class='B5' category='general'></td>
-        <td id='C19' class='C5' category='general'></td>
-        <td id='D19' class='B5' category='general'></td>
-        <td id='E19' class='E7' category='general'></td>
-        <td id='F19' class='F7' category='general'></td>
-        <td id='G19' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW20' style='height:20px;'>
-        <td id='A20' class='A1' category='general'></td>
-        <td id='B20' class='B5' category='general'>Bridge Fees</td>
-        <td id='C20' class='C8' category='number' format='0.00' data-cval=''><input id='iC20' type='text' class='Text iC8' onChange='return calculate("C20")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D20' class='B5' category='general'>$ Canadian</td>
-        <td id='E20' class='E7' category='general'></td>
-        <td id='F20' class='F7' category='general'></td>
-        <td id='G20' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW21' style='height:20px;'>
-        <td id='A21' class='A1' category='general'></td>
-        <td id='B21' class='B5' category='general'></td>
-        <td id='C21' class='C5' category='general'></td>
-        <td id='D21' class='B5' category='general'></td>
-        <td id='E21' class='E7' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("A1:F31","");' onFocus='return hilite(this.id);' /></td>
-        <td id='F21' class='F7' category='general'></td>
-        <td id='G21' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW22' style='height:20px;'>
-        <td id='A22' class='A1' category='general'></td>
-        <td id='B22' class='B5' category='general'>Other</td>
-        <td id='C22' class='C8' category='number' format='0.00' data-cval=''><input id='iC22' type='text' class='Text iC8' onChange='return calculate("C22")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-        <td id='D22' class='B5' category='general'>USD, Euro </td>
-        <td id='E22' class='E7' category='general'></td>
-        <td id='F22' class='F7' category='general'></td>
-        <td id='G22' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW23' style='height:20px;'>
-        <td id='A23' class='A1' category='general'></td>
-        <td id='B23' class='B5' category='general'></td>
-        <td id='C23' class='C5' category='general'></td>
-        <td id='D23' class='B5' category='general'></td>
-        <td id='E23' class='E7' category='general'></td>
-        <td id='F23' class='F7' category='general'></td>
-        <td id='G23' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW24' style='height:21px;'>
-        <td id='A24' class='A1' category='general'></td>
-        <td id='B24' class='B5' category='general'>Total Cost</td>
-        <td id='C24' class='C24' category='number' format='0.00'></td>
-        <td id='D24' class='B5' category='general'>USD, Euro </td>
-        <td id='E24' class='E7' category='general'></td>
-        <td id='F24' class='F7' category='general'></td>
-        <td id='G24' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW25' style='height:20px;'>
-        <td id='A25' class='A1' category='general'></td>
-        <td id='B25' class='B5' category='general'></td>
-        <td id='C25' class='C5' category='general'></td>
-        <td id='D25' class='B5' category='general'></td>
-        <td id='E25' class='E7' category='general'></td>
-        <td id='F25' class='F7' category='general'></td>
-        <td id='G25' class='E7' category='general'></td>
-      </tr>
-      <tr id='ROW26' style='height:21px;'>
-        <td id='A26' class='A26' category='general'></td>
-        <td id='B26' class='A4' category='general'>Equivalent Total Cost</td>
-        <td id='C26' class='C24' category='number' format='0.00'></td>
-        <td id='D26' class='A4' category='general'>$ Can</td>
-        <td id='E26' class='E26' category='general'>Total Cost</td>
-        <td id='F26' class='C24' category='number' format='0.00'></td>
-        <td id='G26' class='E26' category='general'>$ Can</td>
-      </tr>
-      <tr id='ROW27' style='height:20px;'>
-        <td id='A27' class='A1' category='general'></td>
-        <td id='B27' class='A1' category='general'></td>
-        <td id='C27' class='C1' category='general'></td>
-        <td id='D27' class='A1' category='general'></td>
-        <td id='E27' class='A1' category='general'></td>
-        <td id='F27' class='C1' category='general'></td>
-        <td id='G27' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW28' style='height:20px;'>
-        <td id='A28' class='A1' category='general'></td>
-        <td id='B28' class='A1' category='general'></td>
-        <td id='C28' class='C1' category='general'></td>
-        <td id='D28' class='A1' category='general'></td>
-        <td id='E28' class='A1' category='general'></td>
-        <td id='F28' class='C1' category='general'></td>
-        <td id='G28' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW29' style='height:20px;'>
-        <td id='A29' class='A1' category='general'></td>
-        <td id='B29' class='A1' category='general'></td>
-        <td id='C29' class='C1' category='general'></td>
-        <td id='D29' class='A1' category='general'></td>
-        <td id='E29' class='A1' category='general'></td>
-        <td id='F29' class='C1' category='general'></td>
-        <td id='G29' class='A1' category='general'></td>
-      </tr>
-      <tr id='ROW30' style='height:20px;'>
-        <td colspan=7 style='text-align:center; border-left:0px; background-color:transparant; border-right:0px;'><input id='A30' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' /></td>
-      </tr>
-    </table></td></tr></table>
+  <div class="Text"><strong><u>Foreign Purchase Comparison</u></strong></div>
+  <table width="483" border=0 cellpadding=0px cellspacing=0 id='main' style='border-collapse:collapse; text-align:left; table-layout:fixed; width:483px;'>
+    <tr id='ROW2' style='height:25px;'>
+      <td width="483" class='A1' id='E2' category='general'><table width="441" border=0 cellpadding=0px cellspacing=0 id='main2' style='border-collapse:collapse; text-align:left; table-layout:fixed; width:480px;'>
+        <col width='20px' valign='middle' align='left'>
+        <col width='100px' valign='middle' align='left'>
+        <col width='53px' valign='middle' align='left'>
+        <col width='97px' valign='middle' align='left'>
+        <col width='155px' valign='middle' align='left'>
+        <col width='50px' valign='middle' align='left'>
+        <col width='45px' valign='middle' align='left'>
+        <tr id='ROW1' style='height:20px;'>
+          <td width="1" class='A1' id='A1' category='general'></td>
+          <td width="119" class='A1' id='B1' category='general'></td>
+          <td width="51" class='C1' id='C1' category='general'></td>
+          <td width="76" class='A1' id='D1' category='general'></td>
+          <td width="88" class='A1' id='E1' category='general'></td>
+          <td width="50" class='C1' id='F1' category='general'></td>
+          <td width="56" class='A1' id='G1' category='general'></td>
+        </tr>
+       
+        <tr id='ROW3' style='height:20px;'>
+          <td id='A3' class='A1' category='general'></td>
+          <td id='B3' class='A1' category='general'></td>
+          <td id='C3' class='C1' category='general'></td>
+          <td id='D3' class='A1' category='general'></td>
+          <td id='E3' class='A1' category='general'></td>
+          <td id='F3' class='C1' category='general'></td>
+          <td id='G3' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW4' style='height:21px;'>
+          <td id='A4' class='A4' category='general'></td>
+          <td id='B4' class='A4' category='general'>Exchange</td>
+          <td id='C4' class='C4' category='number' format='0.00' data-cval=''><input type='text' autofocus class='Text iC4' id='iC4' onFocus='return hilite(this.id);' onChange='return calculate("C4")' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D4' class='A4' category='general'>USD,Euro</td>
+          <td id='E4' class='A4' category='general'>= 1$ Canadian</td>
+          <td id='F4' class='F4' category='general'></td>
+          <td id='G4' class='A4' category='general'></td>
+        </tr>
+        <tr id='ROW5' style='height:20px;'>
+          <td id='A5' class='A1' category='general'></td>
+          <td id='B5' class='B5' category='general'></td>
+          <td id='C5' class='C5' category='general'></td>
+          <td id='D5' class='B5' category='general'></td>
+          <td id='E5' class='A1' category='general'></td>
+          <td id='F5' class='C1' category='general'></td>
+          <td id='G5' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW6' style='height:21px;'>
+          <td id='A6' class='A6' category='general'></td>
+          <td id='B6' class='B6' category='general'>Foreign Price</td>
+          <td id='C6' class='C6' category='general'></td>
+          <td id='D6' class='B6' category='general'></td>
+          <td id='E6' class='E6' category='general'>Canadian Price</td>
+          <td id='F6' class='F6' category='general'></td>
+          <td id='G6' class='E6' category='general'></td>
+        </tr>
+        <tr id='ROW7' style='height:20px;'>
+          <td id='A7' class='A1' category='general'></td>
+          <td id='B7' class='B5' category='general'></td>
+          <td id='C7' class='C5' category='general'></td>
+          <td id='D7' class='B5' category='general'></td>
+          <td id='E7' class='E7' category='general'></td>
+          <td id='F7' class='F7' category='general'></td>
+          <td id='G7' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW8' style='height:20px;'>
+          <td id='A8' class='A1' category='general'></td>
+          <td id='B8' class='B5' category='general'>Purchase</td>
+          <td id='C8' class='C8' category='number' format='0.00' data-cval=''><input id='iC8' type='text' class='Text iC8' onChange='return calculate("C8")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D8' class='B5' category='general'>USD, Euro </td>
+          <td id='E8' class='E7' category='general'>Purchase Price</td>
+          <td id='F8' class='F8' category='number' format='0.00' data-cval=''><input id='iF8' type='text' class='Text iF8' onChange='return calculate("F8")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='G8' class='E7' category='general'>$ Can</td>
+        </tr>
+        <tr id='ROW9' style='height:20px;'>
+          <td id='A9' class='A1' category='general'></td>
+          <td id='B9' class='B5' category='general'></td>
+          <td id='C9' class='C5' category='general'></td>
+          <td id='D9' class='B5' category='general'></td>
+          <td id='E9' class='E7' category='general'></td>
+          <td id='F9' class='F7' category='general'></td>
+          <td id='G9' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW10' style='height:20px;'>
+          <td id='A10' class='A1' category='general'></td>
+          <td id='B10' class='B5' category='general'>Shipping </td>
+          <td id='C10' class='C8' category='number' format='0.00' data-cval=''><input id='iC10' type='text' class='Text iC8' onChange='return calculate("C10")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D10' class='B5' category='general'>USD, Euro</td>
+          <td id='E10' class='E7' category='general'>Taxes</td>
+          <td id='F10' class='F8' category='number' format='0.00' data-cval=''><input id='iF10' type='text' class='Text iF8' onChange='return calculate("F10")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='G10' class='E7' category='general'>%</td>
+        </tr>
+        <tr id='ROW11' style='height:20px;'>
+          <td id='A11' class='A1' category='general'></td>
+          <td id='B11' class='B5' category='general'></td>
+          <td id='C11' class='C5' category='general'></td>
+          <td id='D11' class='B5' category='general'></td>
+          <td id='E11' class='E7' category='general'></td>
+          <td id='F11' class='F7' category='general'></td>
+          <td id='G11' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW12' style='height:20px;'>
+          <td id='A12' class='A1' category='general'></td>
+          <td id='B12' class='B5' category='general'>Tax</td>
+          <td id='C12' class='C8' category='number' format='0.00' data-cval=''><input id='iC12' type='text' class='Text iC8' onChange='return calculate("C12")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D12' class='B5' category='general'>%</td>
+          <td id='E12' class='E7' category='general'>Shipping Costs</td>
+          <td id='F12' class='F8' category='number' format='0.00' data-cval=''><input id='iF12' type='text' class='Text iF8' onChange='return calculate("F12")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='G12' class='E7' category='general'>$ Can</td>
+        </tr>
+        <tr id='ROW13' style='height:20px;'>
+          <td id='A13' class='A1' category='general'></td>
+          <td id='B13' class='B5' category='general'></td>
+          <td id='C13' class='C5' category='general'></td>
+          <td id='D13' class='B5' category='general'></td>
+          <td id='E13' class='E7' category='general'></td>
+          <td id='F13' class='F7' category='general'></td>
+          <td id='G13' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW14' style='height:20px;'>
+          <td id='A14' class='A1' category='general'></td>
+          <td id='B14' class='B5' category='general'>Broker/Bridge</td>
+          <td id='C14' class='C8' category='number' format='0.00' data-cval=''><input id='iC14' type='text' class='Text iC8' onChange='return calculate("C14")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D14' class='B5' category='general'>%</td>
+          <td id='E14' class='E7' category='general'>PayPal / Visa</td>
+          <td id='F14' class='F8' category='number' format='0.00' data-cval=''><input id='iF14' type='text' class='Text iF8' onChange='return calculate("F14")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='G14' class='E7' category='general'>%</td>
+        </tr>
+        <tr id='ROW15' style='height:20px;'>
+          <td id='A15' class='A1' category='general'></td>
+          <td id='B15' class='B5' category='general'></td>
+          <td id='C15' class='C5' category='general'></td>
+          <td id='D15' class='B5' category='general'></td>
+          <td id='E15' class='E7' category='general'></td>
+          <td id='F15' class='F7' category='general'></td>
+          <td id='G15' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW16' style='height:20px;'>
+          <td id='A16' class='A1' category='general'></td>
+          <td id='B16' class='B5' category='general'>PayPal / Visa</td>
+          <td id='C16' class='C8' category='number' format='0.00' data-cval=''><input id='iC16' type='text' class='Text iC8' onChange='return calculate("C16")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D16' class='B5' category='general'>%</td>
+          <td id='E16' class='E7' category='general'>Other</td>
+          <td id='F16' class='F8' category='number' format='0.00' data-cval=''><input id='iF16' type='text' class='Text iF8' onChange='return calculate("F16")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='G16' class='E7' category='general'>$ Can</td>
+        </tr>
+        <tr id='ROW17' style='height:20px;'>
+          <td id='A17' class='A1' category='general'></td>
+          <td id='B17' class='B5' category='general'></td>
+          <td id='C17' class='C5' category='general'></td>
+          <td id='D17' class='B5' category='general'></td>
+          <td id='E17' class='A1' category='general'></td>
+          <td id='F17' class='C1' category='general'></td>
+          <td id='G17' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW18' style='height:20px;'>
+          <td id='A18' class='A1' category='general'></td>
+          <td id='B18' class='B5' category='general'>Pick Up Fee</td>
+          <td id='C18' class='C8' category='number' format='0.00' data-cval=''><input id='iC18' type='text' class='Text iC8' onChange='return calculate("C18")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D18' class='B5' category='general'>USD, Euro</td>
+          <td id='E18' class='A1' category='general'></td>
+          <td id='F18' class='C1' category='general'></td>
+          <td id='G18' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW19' style='height:20px;'>
+          <td id='A19' class='A1' category='general'></td>
+          <td id='B19' class='B5' category='general'></td>
+          <td id='C19' class='C5' category='general'></td>
+          <td id='D19' class='B5' category='general'></td>
+          <td id='E19' class='E7' category='general'></td>
+          <td id='F19' class='F7' category='general'></td>
+          <td id='G19' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW20' style='height:20px;'>
+          <td id='A20' class='A1' category='general'></td>
+          <td id='B20' class='B5' category='general'>Bridge Fees</td>
+          <td id='C20' class='C8' category='number' format='0.00' data-cval=''><input id='iC20' type='text' class='Text iC8' onChange='return calculate("C20")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D20' class='B5' category='general'>$ Canadian</td>
+          <td id='E20' class='E7' category='general'></td>
+          <td id='F20' class='F7' category='general'></td>
+          <td id='G20' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW21' style='height:20px;'>
+          <td id='A21' class='A1' category='general'></td>
+          <td id='B21' class='B5' category='general'></td>
+          <td id='C21' class='C5' category='general'></td>
+          <td id='D21' class='B5' category='general'></td>
+          <td id='E21' class='E7' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("A1:F31","");' onFocus='return hilite(this.id);' /></td>
+          <td id='F21' class='F7' category='general'></td>
+          <td id='G21' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW22' style='height:20px;'>
+          <td id='A22' class='A1' category='general'></td>
+          <td id='B22' class='B5' category='general'>Other</td>
+          <td id='C22' class='C8' category='number' format='0.00' data-cval=''><input id='iC22' type='text' class='Text iC8' onChange='return calculate("C22")' onFocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+          <td id='D22' class='B5' category='general'>USD, Euro </td>
+          <td id='E22' class='E7' category='general'></td>
+          <td id='F22' class='F7' category='general'></td>
+          <td id='G22' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW23' style='height:20px;'>
+          <td id='A23' class='A1' category='general'></td>
+          <td id='B23' class='B5' category='general'></td>
+          <td id='C23' class='C5' category='general'></td>
+          <td id='D23' class='B5' category='general'></td>
+          <td id='E23' class='E7' category='general'></td>
+          <td id='F23' class='F7' category='general'></td>
+          <td id='G23' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW24' style='height:21px;'>
+          <td id='A24' class='A1' category='general'></td>
+          <td id='B24' class='B5' category='general'>Total Cost</td>
+          <td id='C24' class='C24' category='number' format='0.00'></td>
+          <td id='D24' class='B5' category='general'>USD, Euro </td>
+          <td id='E24' class='E7' category='general'></td>
+          <td id='F24' class='F7' category='general'></td>
+          <td id='G24' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW25' style='height:20px;'>
+          <td id='A25' class='A1' category='general'></td>
+          <td id='B25' class='B5' category='general'></td>
+          <td id='C25' class='C5' category='general'></td>
+          <td id='D25' class='B5' category='general'></td>
+          <td id='E25' class='E7' category='general'></td>
+          <td id='F25' class='F7' category='general'></td>
+          <td id='G25' class='E7' category='general'></td>
+        </tr>
+        <tr id='ROW26' style='height:21px;'>
+          <td id='A26' class='A26' category='general'></td>
+          <td id='B26' class='A4' category='general'>Equivalent Cost</td>
+          <td id='C26' class='C24' category='number' format='0.00'></td>
+          <td id='D26' class='A4' category='general'>$ Can</td>
+          <td id='E26' class='E26' category='general'>Total Cost</td>
+          <td id='F26' class='C24' category='number' format='0.00'></td>
+          <td id='G26' class='E26' category='general'>$ Can</td>
+        </tr>
+        <tr id='ROW27' style='height:20px;'>
+          <td id='A27' class='A1' category='general'></td>
+          <td id='B27' class='A1' category='general'></td>
+          <td id='C27' class='C1' category='general'></td>
+          <td id='D27' class='A1' category='general'></td>
+          <td id='E27' class='A1' category='general'></td>
+          <td id='F27' class='C1' category='general'></td>
+          <td id='G27' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW28' style='height:20px;'>
+          <td id='A28' class='A1' category='general'></td>
+          <td id='B28' class='A1' category='general'></td>
+          <td id='C28' class='C1' category='general'></td>
+          <td id='D28' class='A1' category='general'></td>
+          <td id='E28' class='A1' category='general'></td>
+          <td id='F28' class='C1' category='general'></td>
+          <td id='G28' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW29' style='height:20px;'>
+          <td id='A29' class='A1' category='general'></td>
+          <td id='B29' class='A1' category='general'></td>
+          <td id='C29' class='C1' category='general'></td>
+          <td id='D29' class='A1' category='general'></td>
+          <td id='E29' class='A1' category='general'></td>
+          <td id='F29' class='C1' category='general'></td>
+          <td id='G29' class='A1' category='general'></td>
+        </tr>
+        <tr id='ROW30' style='height:20px;'>
+          <td colspan=7 style='text-align:center; border-left:0px; background-color:transparant; border-right:0px;'><input id='A30' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' /></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
   <input type=hidden name='formTitle' id='formTitle' value='Sheet1' />
 <input type=hidden name='formHtml' id='formHtml' />
 </form>
