@@ -215,9 +215,7 @@ body {
 
 <tr id='ROW2' style='height:31px;'>
 <td id='A2' class='A1' category='general'></td>
-<td id='B2' class='B2' category='general'><span class="A1"><span class="B5"><span class="E7"><span class="C5"><span class="A6">
-<input id='A17' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' />
-</span></span></span></span></span></td>
+<td id='B2' class='B2' category='general'>&nbsp;</td>
 <td id='C2' class='C1' category='general'></td>
 <td id='D2' class='A1' category='general'></td>
 <td id='D2' class='A1' category='general'></td>
@@ -250,7 +248,7 @@ body {
 
 <tr id='ROW6' style='height:20px;'>
 <td id='A6' class='A6' category='general'></td>
-<td id='B6' class='A6' category='general'>U.S. Gase Price</td>
+<td id='B6' class='A6' category='general'>U.S. Gas Price</td>
 <td id='C6' class='C6' category='number' format='0.00' data-cval=''>
    <input id='iC6' type='text' class='Text iC6' onChange='return calculate("C6")' onfocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
 <td id='D6' class='A6' category='general'>U.S $/Gal</td>
@@ -348,16 +346,32 @@ body {
 <div id='FilterMenu'   class='FilterMenu'   style='display:none;'></div>
 <div id='UserMessage'  class='InputMessage' style='display:none; width:100px; height:50px; position:absolute; top:50%; left:50%; margin-left:-50px; margin-top:-25px; text-align:center; line-height:4em;'></div>
 
-<!-- formulas -->
-<object id='fC10' formula='+((C6*(1+(C8/100))/C4)/3.785)/1'></object>
-<object id='fC14' formula='(1-(C10/C12))*100'></object>
-
-<!-- dependencies -->
-<object id='dC4' dependents='C10,B16,C18,I10,C14,I18,L22'></object>
-<object id='dC6' dependents='C10,B16,I10,C14,C18,I18,L22'></object>
-<object id='dC8' dependents='I8,C10,B16,I10,C14,C18,I18,L22'></object>
-<object id='dC10' dependents='I10,C14,B16,C18,I18,L22'></object>
-<object id='dC12' dependents='C14,B16'></object>
-<object id='dC14' dependents='B16'></object>
-<object id='dB16' dependents='B16'></object>
+<p>
+  <!-- formulas -->
+  <object id='fC10' formula='+((C6*(1+(C8/100))/C4)/3.785)/1'>
+  </object>
+  <object id='fC14' formula='(1-(C10/C12))*100'>
+  </object>
+  
+  <!-- dependencies -->
+  <object id='dC4' dependents='C10,B16,C18,I10,C14,I18,L22'>
+  </object>
+  <object id='dC6' dependents='C10,B16,I10,C14,C18,I18,L22'>
+  </object>
+  <object id='dC8' dependents='I8,C10,B16,I10,C14,C18,I18,L22'>
+  </object>
+  <object id='dC10' dependents='I10,C14,B16,C18,I18,L22'>
+  </object>
+  <object id='dC12' dependents='C14,B16'>
+  </object>
+  <object id='dC14' dependents='B16'>
+  </object>
+  </p>
+<p>&nbsp;</p>
+<p><span class="B2"><span class="A1"><span class="B5"><span class="E7"><span class="C5"><span class="A6">
+  <input id='A17' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' />
+  </span></span></span></span></span></span>
+  <object id='dB16' dependents='B16'>
+  </object>
+</p>
 </center></body></html>
