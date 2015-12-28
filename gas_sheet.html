@@ -199,7 +199,7 @@ body {
 
 <body onload='wwsInit();'><center>
 <form name='worksheet' action='' enctype='multipart/form-data'>
-<table id='main' border=0 cellpadding=0px cellspacing=0 style='border-collapse:collapse; text-align:left; table-layout:fixed; width:366px;'>
+<table width="366" border=0 cellpadding=0px cellspacing=0 id='main' style='border-collapse:collapse; text-align:left; table-layout:fixed; width:366px;'>
 <col width='20px' valign='middle' align='left'>
 <col width='128px' valign='middle' align='left'>
 <col width='68px' valign='middle' align='left'>
@@ -207,113 +207,127 @@ body {
 <col width='70px' valign='middle' align='left'>
 
 <tr id='ROW1' style='height:20px;'>
-<td width="11" class='A1' id='A1' category='general'></td>
-<td width="77" class='A1' id='B1' category='general'></td>
-<td width="94" class='C1' id='C1' category='general'></td>
-<td width="68" class='A1' id='D1' category='general'></td>
-<td width="116" class='A1' id='E1' category='general'></td></tr>
+<td width="4" class='A1' id='A1' category='general'></td>
+<td width="91" class='A1' id='B1' category='general'></td>
+<td width="99" class='C1' id='C1' category='general'></td>
+<td width="59" class='A1' id='D1' category='general'></td>
+<td width="113" class='A1' id='E1' category='general'></td></tr>
 
 <tr id='ROW2' style='height:31px;'>
 <td id='A2' class='A1' category='general'></td>
 <td id='B2' class='B2' category='general'>&nbsp;</td>
 <td id='C2' class='C1' category='general'></td>
 <td id='D2' class='A1' category='general'></td>
-<td id='E2' class='A1' category='general'></td></tr>
+<td id='D2' class='A1' category='general'></td>
+</tr>
 
 <tr id='ROW3' style='height:20px;'>
 <td id='A3' class='A1' category='general'></td>
 <td id='B3' class='A1' category='general'></td>
 <td id='C3' class='C1' category='general'></td>
 <td id='D3' class='A1' category='general'></td>
-<td id='E3' class='A1' category='general'></td></tr>
+<td id='D3' class='A1' category='general'></td>
+</tr>
 
 <tr id='ROW4' style='height:21px;'>
 <td id='A4' class='A4' category='general'></td>
 <td id='B4' class='A4' category='general'>Exchange Rate</td>
 <td id='C4' class='C4' category='number' format='0.00' data-cval=''>
    <input id='iC4' type='text' class='Text iC4' onChange='return calculate("C4")' onfocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
-<td id='D4' class='A4' category='general'>USD = 1 $</td>
-<td id='E4' class='A4' category='general'> Canadian</td></tr>
+<td id='D4' class='A4' category='general'>USD = 1 $ </td>
+<td id='D4' class='A4' category='general'>Canadian</td>
+</tr>
 
 <tr id='ROW5' style='height:20px;'>
 <td id='A5' class='A1' category='general'></td>
 <td id='B5' class='B5' category='general'></td>
 <td id='C5' class='C5' category='general'></td>
 <td id='D5' class='B5' category='general'></td>
-<td id='E5' class='A1' category='general'></td></tr>
+<td id='D5' class='B5' category='general'></td>
+</tr>
 
 <tr id='ROW6' style='height:20px;'>
 <td id='A6' class='A6' category='general'></td>
 <td id='B6' class='A6' category='general'>U.S. Gase Price</td>
 <td id='C6' class='C6' category='number' format='0.00' data-cval=''>
    <input id='iC6' type='text' class='Text iC6' onChange='return calculate("C6")' onfocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+<td id='D6' class='A6' category='general'>&nbsp;</td>
 <td id='D6' class='A6' category='general'>U.S $/Gal</td>
-<td id='E6' class='A6' category='general'></td></tr>
+</tr>
 
 <tr id='ROW7' style='height:20px;'>
 <td id='A7' class='A1' category='general'></td>
 <td id='B7' class='B5' category='general'></td>
 <td id='C7' class='C5' category='general'></td>
 <td id='D7' class='B5' category='general'></td>
-<td id='E7' class='E7' category='general'></td></tr>
+<td id='D7' class='B5' category='general'></td>
+</tr>
 
 <tr id='ROW8' style='height:20px;'>
 <td id='A8' class='A1' category='general'></td>
 <td id='B8' class='B5' category='general'>Visa</td>
 <td id='C8' class='C8' category='number' format='0.00' data-cval=''>
    <input id='iC8' type='text' class='Text iC8' onChange='return calculate("C8")' onfocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+<td id='D8' class='B5' category='general'>&nbsp;</td>
 <td id='D8' class='B5' category='general'>%</td>
-<td id='E8' class='E7' category='general'></td></tr>
+</tr>
 
 <tr id='ROW9' style='height:20px;'>
 <td id='A9' class='A1' category='general'></td>
 <td id='B9' class='B5' category='general'></td>
 <td id='C9' class='C5' category='general'></td>
 <td id='D9' class='B5' category='general'></td>
-<td id='E9' class='E7' category='general'></td></tr>
+<td id='D9' class='B5' category='general'></td>
+</tr>
 
 <tr id='ROW10' style='height:22px;'>
 <td id='A10' class='A1' category='general'></td>
 <td id='B10' class='B5' category='general'>Total Cost</td>
 <td id='C10' class='C10' category='number' format='0.00'></td>
+<td id='D10' class='A4' category='general'>&nbsp;</td>
 <td id='D10' class='A4' category='general'>Can $/Litre</td>
-<td id='E10' class='E7' category='general'></td></tr>
+</tr>
 
 <tr id='ROW11' style='height:22px;'>
 <td id='A11' class='A1' category='general'></td>
 <td id='B11' class='B5' category='general'></td>
 <td id='C11' class='C10' category='number' format='0.00'></td>
 <td id='D11' class='A4' category='general'></td>
-<td id='E11' class='E7' category='general'></td></tr>
+<td id='D11' class='A4' category='general'></td>
+</tr>
 
 <tr id='ROW12' style='height:22px;'>
 <td id='A12' class='A12' category='general'></td>
 <td id='B12' class='B12' category='general'>Can. Gas Price </td>
 <td id='C12' class='C12' category='number' format='0.00' data-cval=''>
    <input id='iC12' type='text' class='Text iC12' onChange='return calculate("C12")' onfocus='return hilite(this.id);' onKeyDown='return enterKeyIsTab(event);' data-default='' /></td>
+<td id='D12' class='A4' category='general'>&nbsp;</td>
 <td id='D12' class='A4' category='general'>Can $/Litre</td>
-<td id='E12' class='A6' category='general'></td></tr>
+</tr>
 
 <tr id='ROW13' style='height:21px;'>
 <td id='A13' class='A1' category='general'></td>
 <td id='B13' class='B5' category='general'></td>
 <td id='C13' class='C10' category='number' format='0.00'></td>
 <td id='D13' class='A4' category='general'></td>
-<td id='E13' class='E7' category='general'></td></tr>
+<td id='D13' class='A4' category='general'></td>
+</tr>
 
 <tr id='ROW14' style='height:21px;'>
 <td id='A14' class='A1' category='general'></td>
 <td id='B14' class='B5' category='general'>Savings</td>
 <td id='C14' class='C10' category='number' format='0.00'></td>
+<td id='D14' class='A4' category='general'>&nbsp;</td>
 <td id='D14' class='A4' category='general'>%</td>
-<td id='E14' class='E7' category='general'></td></tr>
+</tr>
 
 <tr id='ROW15' style='height:20px;'>
 <td id='A15' class='A1' category='general'></td>
 <td id='B15' class='B5' category='general'></td>
 <td id='C15' class='C5' category='general'></td>
 <td id='D15' class='B5' category='general'></td>
-<td id='E15' class='E7' category='general'></td></tr>
+<td id='D15' class='B5' category='general'></td>
+</tr>
 
 <tr id='ROW16' style='height:20px;'>
 <td id='A16' class='A1' category='general'></td>
@@ -322,9 +336,11 @@ body {
   <input class='button' type='button' value='Calculate' onClick='return recalculate("A1:E22","");' onFocus='return hilite(this.id);' />
 </span></td>
 <td id='D16' class='B5' category='general'></td>
-<td id='E16' class='E7' category='general'><span class="C5"><span class="A6">
-  <input id='A2' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' />
-</span></span></td></tr></table>
+<td id='D16' class='B5' category='general'><span class="E7"><span class="C5"><span class="A6">
+  <input id='A17' class='button' type='button' value='Reset' onClick='return clearForm(this.id);' onFocus='return hilite(this.id);' />
+</span></span></span></td>
+</tr>
+</table>
 
 </form>
 <div id='InputMessage' class='InputMessage' style='display:none;'></div>
